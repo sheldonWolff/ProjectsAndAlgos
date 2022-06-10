@@ -24,4 +24,4 @@ function rotateArr(arr, shiftBy) {
     return arr;
 };
 console.log(rotateArr([1,2,3,4],2));
-console.log(rotateArr([4,5,6],4));
+console.log(rotateArr([4,5,6],3));
