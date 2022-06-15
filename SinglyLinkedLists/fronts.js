@@ -38,15 +38,38 @@ class LinkedList {
         let val = this.head.data;
         return val;
     }
+
+    findSum() {
+        let runner=this.head
+        let sum=0
+        while(runner !== null){
+            sum+=runner.data
+            runner=runner.next
+        }
+        return sum
+    }
+
+    contains(value) {
+        let runner=this.head
+        while(runner !== null){
+            if(runner.data == value){
+                return true;
+            }
+            runner=runner.next
+        }
+        return false;
+    }
 }
 SLL1 = new LinkedList()
 SLL1.addFront(18)
 SLL1.addFront(5)
 SLL1.addFront(73)
 console.log(SLL1)
+console.log(SLL1.contains(5))
 SLL1.removeFront()
 SLL1.removeFront()
 console.log(SLL1)
 console.log(SLL1.front())
 console.log(SLL1.removeFront())
 console.log(SLL1.front())
+console.log(SLL1.contains(5))
