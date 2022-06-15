@@ -59,6 +59,16 @@ class LinkedList {
         }
         return false;
     }
+
+    length() {
+        let runner = this.head
+        let sum = 0
+        while(runner!==null){
+            sum+=1
+            runner=runner.next
+        }
+        return sum;
+    }
 }
 SLL1 = new LinkedList()
 SLL1.addFront(18)
@@ -66,8 +76,11 @@ SLL1.addFront(5)
 SLL1.addFront(73)
 console.log(SLL1)
 console.log(SLL1.contains(5))
+console.log(SLL1.length())
 SLL1.removeFront()
+console.log(SLL1.length())
 SLL1.removeFront()
+console.log(SLL1.length())
 console.log(SLL1)
 console.log(SLL1.front())
 console.log(SLL1.removeFront())
